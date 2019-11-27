@@ -20,6 +20,10 @@ body {
 	margin: 5vh auto;
 }
 
+ul {
+	list-style: none;
+}
+
 .welcome {
 	margin: 20px auto;
 }
