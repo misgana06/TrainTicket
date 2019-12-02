@@ -1,18 +1,24 @@
 package com.trainticket;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 import java.util.TreeMap;
 public class Ticket {
 	
-	private static int counter;
+	private static int counter = 100;
 	private String pnr;
 	private Date travelDate;
-	private static Train train;
+	private Train train;
 	private TreeMap<Passenger,Integer> passengers;
+	
 	public Ticket(Date travelDate, Train train) {
 		this.travelDate = travelDate;
 		this.train = train;
 	}
+	public Ticket() {
+		
+	}
+	
 	public static int getCounter() {
 		return counter;
 	}
@@ -43,6 +49,11 @@ public class Ticket {
 	public void setPassengers(TreeMap<Passenger, Integer> passengers) {
 		this.passengers = passengers;
 	}
+	/*
+	 * This method generates PNR Number by adding first character of source station,
+	 *  first character of destination station, travel date and 
+	 *  a running counter starting from 100.
+	 */
 	public String generatePNR() {
 //      Add Date + running counter
       SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
@@ -55,8 +66,11 @@ public class Ticket {
   String pnr = train.getSource().charAt(0) + train.getDestination().charAt(0) +"_"+ finalDate +"_"+ Integer.toString(counter++);
   return pnr;
 	}
-	
-	public static double calcPassengerFare(Passenger p) {
+	/*
+	 * This method calculates the passengers fare. If a passenger is within a certain 
+	 * age threshold, they will receive a discount
+	 */
+	public double calcPassengerFare(Passenger p) {
         int age = p.getAge();
         char gender = Character.toLowerCase(p.getGender());
         double trainPrice = train.getTicketPrice();
@@ -64,7 +78,7 @@ public class Ticket {
 //        Make sure to lowercase method is working!
         if(gender == 'f') {
             amount = amount - (trainPrice * 0.25);
-        }
+        } 
         if(age >= 60) {
             amount = amount - (trainPrice * 0.60);
         }
@@ -73,6 +87,10 @@ public class Ticket {
         }
         return amount;
 	}
+	/*
+	 * This method adds a passenger in tree map form, which allows us to organize
+	 * the passengers and their respective fares.
+	 */
 	public void addPassenger(String name, int age, char gender) {
 		
 		 Passenger person = new Passenger(name,age,gender);
