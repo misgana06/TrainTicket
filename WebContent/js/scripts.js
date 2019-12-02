@@ -1,3 +1,3 @@
 var passengerCount = 1;
 
-alert("Test");
+document.getElementById("anotherPassenger").addEventListener
