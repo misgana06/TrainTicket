@@ -14,6 +14,11 @@ public class TrainDAO {
 	String password="admin";
 	Train trn;
 	
+	/*
+	 * connects to trains db
+	 * returns ticket info based on ticket number
+	 * 
+	 */
 	public Train findTrain(int trainNo) {
 		
 		try {
