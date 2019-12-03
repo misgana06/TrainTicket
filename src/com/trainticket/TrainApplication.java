@@ -1,16 +1,22 @@
 package com.trainticket;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class TrainApplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-      TrainDAO obj= new TrainDAO();
-     Train obj2 =  obj.findTrain(1001);
-      
-  
-      
- 
-     System.out.print(obj2.trainName);
+	 TrainDAO train = new TrainDAO();
+	 Train obj = train.findTrain(1003);
+	 Date d1 = new Date();
+	 Ticket t1 = new Ticket(d1,obj);
+     t1.addPassenger("Test",1,'F');
+     t1.addPassenger("Moh", 24, 'M');
+     t1.generatePNR();
+     t1.writeTicket();
+     
 
       
 	}

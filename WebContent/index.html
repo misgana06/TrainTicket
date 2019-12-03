@@ -11,18 +11,56 @@
 <body>
 	<div class="main">
 		<h1>Welcome To Train Ticket</h1>
-		<div class="welcome">
-			<h3>Your One Stop Shop for Ticket Generation</h3>
-			<button id="generate">Generate My Ticket</button>
+		<div id="welcome">
+			<h2>Your One Stop Shop for Ticket Generation</h2>
+			<button class="btn" id="generate">Generate My Ticket</button>
 		</div>
-		<div>
-			<ul>
-				<li>Edited by Clayton</li>
-				<li>Edited by Mohamed</li>
-				<li>Edited by Misgana</li>
-				<li>Edited by Jordan</li>
-			</ul>
+		<div id="ticketForm">
+			<form method="POST" action="TicketApplication.jsp">
+				<h3>Please Enter Your Details</h3>
+				<div class="row">
+					<label>Select Train:</label>
+					<div>
+						<select id="trains" class="inputField" name="trainNum">
+							<option value="0" selected disabled>Please Select</option>
+							<option value="1001">Train 1001: Bangalore to Delhi</option>
+							<option value="1002">Train 1002: Delhi to Bangalore</option>
+							<option value="1003">Train 1003: Bangalore to Mumbai</option>
+							<option value="1004">Train 1004: Mumbai to Bangalore</option>
+							<option value="1005">Train 1005: Bangalore to Chennai</option>
+							<option value="1006">Train 1006: Chennai to Bangalore</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<label>Travel Date: </label>
+					<input class="inputField" type="date" id="date" name="travelDate" disabled />
+				</div>
+				<div class="row">
+					<label>Passengers:</label>
+					<div>
+						<select disabled name="passengerNumber" id="numberOfPassengers" class="inputField">
+							<option value="0" selected disabled>Number of Passengers</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+							<option value="4">Four</option>
+							<option value="5">Five</option>
+							<option value="6">Six</option>
+							<option value="7">Seven</option>
+							<option value="8">Eight</option>
+						</select>
+					</div>
+					
+				</div>
+				<div id="passengers" class="row">
+					
+				</div>
+				<button id="submit" class="btn">Submit!</button>
+			</form>
 		</div>
 	</div>
+
+<script src=js/scripts.js></script>
 </body>
 </html>
