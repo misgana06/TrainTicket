@@ -95,8 +95,9 @@ if (trainNum == 0 || passengerNumber == 0 || dateStr == null) {
 			
 			// Generate Ticket and Save
 			ticket.generatePNR();
-			StringBuilder ticketOutput = ticket.generateTicket();
 			ticket.writeTicket();
+			StringBuilder ticketOutput = ticket.generateTicket();
+			
 			%>
 			<pre id="ticket"><%= ticketOutput.toString() %></pre>
 			<h3>Your Ticket Has Been Saved!</h3>
