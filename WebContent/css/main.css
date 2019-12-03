@@ -13,18 +13,28 @@ body {
 	align-items: center;
 	text-align: center;
 	background-color: #f3f7f3;
-	padding-top: 15vh;
+	padding-top: 10vh;
 	width: 60%;
-	height: 90vh;
+	min-height: 90vh;
 	border-radius: 15px;
 	margin: 5vh auto;
+}
+
+.ticketMain {
+	padding-top: 10vh;
+}
+
+@media (max-width: 1000px) {
+	.main {
+		width: 80%;
+	}
 }
 
 ul {
 	list-style: none;
 }
 
-.welcome {
+#welcome {
 	margin: 20px auto;
 }
 
@@ -37,7 +47,7 @@ h2 {
 	font-weight: 400;
 }
 
-#generate {
+.btn {
 	cursor: pointer;
 	padding: 10px 15px;
 	font-size: 1.1em;
@@ -48,30 +58,29 @@ h2 {
 	margin: 20px;
 }
 
-#generate:hover {
+.btn:hover {
 	background-color: #9fccb7;
 	border-color: #223446;
 	color: #223446;
 	transition: background-color 0.05s;
 }
 
-#generate:active {
+.btn:active {
 	background-color: #223446;
 	border-color: #223446;
 	color: #f3f7f3;
 	transition: background-color 0.05s;
 }
 
-#generate:focus {
-	outline: none;
-}
 
 /* Form CSS */
 
-.ticketForm {
-	display: flex;
+#ticketForm {
+	margin: 20px auto;
+	display: none;
 	flex-direction: column;
 	align-items: center;
+	padding-bottom: 30px;
 }
 
 .row {
@@ -88,7 +97,7 @@ h2 {
 }
 
 .row label {
-	width: 150px;
+	width: 200px;
 }
 
 .row .inputField {
@@ -103,13 +112,13 @@ h2 {
 }
 
 .pRow label {
-	width: 125px;
+	width: 175px;
 	text-align: right;
 	padding-right: 10px;
 }
 
 .pRow .inputField {
-	width: 275px;
+	width: 250px;
 }
 
 .passengerDetails {
@@ -126,8 +135,65 @@ h2 {
 	font-size: 1.2em;
 }
 
-#anotherPassenger {
-	margin: 0 auto;
+
+.passengerNumber {
+	align-self: left;
+	margin-top: 15px;
 }
 
+#submit {
+	display: none;
+	margin: 20px auto;
+}
 
+#ticket {
+	font-family: 'Roboto Mono', monospace;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	width: 800px;
+	max-width: 80%;
+	margin: 20px auto;
+	align-self: center;
+	padding: 15px;
+	text-align: left;
+}
+
+.another {
+	cursor: pointer;
+	padding: 8px 12px;
+	font-size: 1em;
+	border: 1px solid #007096;
+	border-radius: 5px;
+	background-color: #0da1d6;
+	color: #fff;
+	margin: 20px;
+}
+
+.another:hover {
+	background-color: #a6e8ff;
+	border-color: #007096;
+	color: #223446;
+	transition: background-color 0.05s;
+}
+
+.another:active {
+	background-color: #007096;
+	border-color: #007096;
+	color: #f3f7f3;
+	transition: background-color 0.05s;
+}
+
+.errorMsg {
+	padding-top: 10vh;
+	color: #d91200;
+	font-size: 1.4em;
+}
+
+.back {
+	padding: 5px 10px;
+	font-size: 1em;
+}
