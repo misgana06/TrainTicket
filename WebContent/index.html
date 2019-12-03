@@ -11,17 +11,17 @@
 <body>
 	<div class="main">
 		<h1>Welcome To Train Ticket</h1>
-		<div class="welcome">
+		<div id="welcome">
 			<h2>Your One Stop Shop for Ticket Generation</h2>
-			<button id="generate">Generate My Ticket</button>
+			<button class="btn" id="generate">Generate My Ticket</button>
 		</div>
-		<div class="ticketForm">
-			<form method="POST" action="app.jsp">
+		<div id="ticketForm">
+			<form method="POST" action="TicketApplication.jsp">
 				<h3>Please Enter Your Details</h3>
 				<div class="row">
 					<label>Select Train:</label>
 					<div>
-						<select class="inputField">
+						<select id="trains" class="inputField">
 							<option value="0" selected disabled>Please Select</option>
 							<option value="1001">Train 1001: Bangalore to Delhi</option>
 							<option value="1002">Train 1002: Delhi to Bangalore</option>
@@ -33,31 +33,27 @@
 					</div>
 					
 				</div>
-				<div id="passengers" class="row">
-					<label class="passengerNumber">Passenger 1</label>
-					<div class="passengerDetails">
-						<div class="pRow">
-							<label>Name:</label>
-							<input class="inputField" type="text" name="pName" placeholder="Full Name" required />
-						</div>
-						<div class="pRow">
-							<label>Age:</label>
-							<input class="inputField" type="number" name="pAge" min="0" max="100" required />
-						</div>
-						<div class="pRow">
-							<label>Gender:</label>
-							<select class="inputField" required>
-								<option value="0" selected disabled>Please Select</option>
-								<option value="male">Male</option>
-								<option value="female">Female</option>
-								<option value="other">Other</option>
-							</select>
-						</div>
-					</div>
-				</div>
 				<div class="row">
-					<button id="anotherPassenger">Add Another Passenger</button>
+					<label>Passengers:</label>
+					<div>
+						<select disabled id="numberOfPassengers" class="inputField">
+							<option value="0" selected disabled>Number of Passengers</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+							<option value="4">Four</option>
+							<option value="5">Five</option>
+							<option value="6">Six</option>
+							<option value="7">Seven</option>
+							<option value="8">Eight</option>
+						</select>
+					</div>
+					
 				</div>
+				<div id="passengers" class="row">
+					
+				</div>
+				<button id="submit" class="btn">Submit!</button>
 			</form>
 		</div>
 	</div>
