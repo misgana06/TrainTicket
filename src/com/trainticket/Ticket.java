@@ -19,9 +19,10 @@ public class Ticket {
 		this.travelDate = travelDate;
 		this.train = train;
 	}
-public Ticket() {
-	
-}
+	//default
+	public Ticket() {
+		
+	}
 
 	
 	public static int getCounter() {
