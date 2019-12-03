@@ -162,10 +162,10 @@ h2 {
 	text-align: left;
 }
 
-.download {
+.another {
 	cursor: pointer;
 	padding: 8px 12px;
-	font-size: 1.1em;
+	font-size: 1em;
 	border: 1px solid #007096;
 	border-radius: 5px;
 	background-color: #0da1d6;
@@ -173,14 +173,14 @@ h2 {
 	margin: 20px;
 }
 
-.download:hover {
+.another:hover {
 	background-color: #a6e8ff;
 	border-color: #007096;
 	color: #223446;
 	transition: background-color 0.05s;
 }
 
-.download:active {
+.another:active {
 	background-color: #007096;
 	border-color: #007096;
 	color: #f3f7f3;

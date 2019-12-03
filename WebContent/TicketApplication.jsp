@@ -93,12 +93,15 @@ if (trainNum == 0 || passengerNumber == 0 || dateStr == null) {
 				ticket.addPassenger(name, age, gender);
 			}
 			
-			// Generate Ticket
+			// Generate Ticket and Save
 			ticket.generatePNR();
+			ticket.writeTicket();
 			StringBuilder ticketOutput = ticket.generateTicket();
+			
 			%>
 			<pre id="ticket"><%= ticketOutput.toString() %></pre>
-			<button class="download">Download Ticket</button>
+			<h3>Your Ticket Has Been Saved!</h3>
+			<a href="index.html"><button class="another">Generate Another Ticket</button></a>
 			<%
 		}
 	}
