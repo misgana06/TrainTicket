@@ -1,3 +1,4 @@
+
 package com.trainticket;
 
 import java.sql.DriverManager;
@@ -9,11 +10,16 @@ import java.sql.Statement;
 public class TrainDAO {
 	
 	String driver_name="oracle.jdbc.driver.OracleDriver";
-	String DB_URL="jdbc:oracle:thin:@localhost:1521:orcl";
+	String DB_URL="jdbc:oracle:thin:@localhost:1523:system";
 	String username="hr";
-	String password="hr";
+	String password="admin";
 	Train trn;
 	
+	/*
+	 * connects to trains db
+	 * returns ticket info based on ticket number
+	 * 
+	 */
 	public Train findTrain(int trainNo) {
 		
 		try {
@@ -42,3 +48,4 @@ public class TrainDAO {
 	}
 
 }
+
