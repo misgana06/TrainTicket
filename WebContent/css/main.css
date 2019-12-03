@@ -20,6 +20,12 @@ body {
 	margin: 5vh auto;
 }
 
+@media (max-width: 1000px) {
+	.main {
+		width: 80%;
+	}
+}
+
 ul {
 	list-style: none;
 }

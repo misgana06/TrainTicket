@@ -14,7 +14,7 @@
 <body>
 
 <%! int passNum; %>
-<%!  %>
+<%! int trainNum; %>
 
 
 </body>

@@ -1,8 +1,8 @@
 
-
 var ticketForm = document.getElementById("ticketForm");
 var passengers = document.getElementById("passengers");
 var another = document.getElementById("anotherPassenger");
+var dateField = document.getElementById("date");
 
 document.getElementById("numberOfPassengers").addEventListener("change", function(){
 	document.getElementById("submit").style.display="block";
@@ -36,6 +36,20 @@ document.getElementById("numberOfPassengers").addEventListener("change", functio
 });
 
 document.getElementById("trains").addEventListener("change", function(){
+	var today = new Date();
+	var dd = String(today.getDate() + 1).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0');
+	var yyyy = today.getFullYear();
+
+	var minDate = yyyy + '-' + mm + '-' + dd;
+	var maxDate = (yyyy + 1) + '-' + mm + '-' + dd;
+	
+	dateField.setAttribute("min", minDate);
+	dateField.setAttribute("max", maxDate);
+	dateField.disabled=false;
+});
+
+document.getElementById("date").addEventListener("change", function(){
 	document.getElementById("numberOfPassengers").disabled=false;
 });
 
