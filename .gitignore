@@ -1,7 +1,6 @@
 .DS_Store
-
 .project
-
 .classpath
-
 .settings
+/bin/
+WebContent/icons/.DS_Store
