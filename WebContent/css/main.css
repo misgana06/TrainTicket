@@ -15,16 +15,22 @@ body {
 	background-color: #f3f7f3;
 	padding-top: 15vh;
 	width: 60%;
-	height: 90vh;
+	min-height: 90vh;
 	border-radius: 15px;
 	margin: 5vh auto;
+}
+
+@media (max-width: 1000px) {
+	.main {
+		width: 80%;
+	}
 }
 
 ul {
 	list-style: none;
 }
 
-.welcome {
+#welcome {
 	margin: 20px auto;
 }
 
@@ -33,11 +39,11 @@ h1 {
 	font-weight: 400;
 }
 
-h3 {
+h2 {
 	font-weight: 400;
 }
 
-#generate {
+.btn {
 	cursor: pointer;
 	padding: 10px 15px;
 	font-size: 1.1em;
@@ -48,14 +54,14 @@ h3 {
 	margin: 20px;
 }
 
-#generate:hover {
+.btn:hover {
 	background-color: #9fccb7;
 	border-color: #223446;
 	color: #223446;
 	transition: background-color 0.05s;
 }
 
-#generate:active {
+.btn:active {
 	background-color: #223446;
 	border-color: #223446;
 	color: #f3f7f3;
@@ -64,4 +70,77 @@ h3 {
 
 #generate:focus {
 	outline: none;
+}
+
+/* Form CSS */
+
+#ticketForm {
+	margin: 20px auto;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 30px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 10px;
+}
+
+#passengers {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.row label {
+	width: 200px;
+}
+
+.row .inputField {
+	width: 300px;
+}
+
+.pRow {
+	margin: 5px;
+	padding-left: 25px;
+	display: flex;
+	flex-direction: row;
+}
+
+.pRow label {
+	width: 175px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.pRow .inputField {
+	width: 250px;
+}
+
+.passengerDetails {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.inputField {
+	padding: 2px 5px;
+}
+
+.inputField option {
+	font-size: 1.2em;
+}
+
+
+.passengerNumber {
+	align-self: left;
+	margin-top: 15px;
+}
+
+#submit {
+	display: none;
+	margin: 20px auto;
 }
