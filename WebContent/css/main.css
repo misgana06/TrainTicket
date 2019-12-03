@@ -13,11 +13,15 @@ body {
 	align-items: center;
 	text-align: center;
 	background-color: #f3f7f3;
-	padding-top: 15vh;
+	padding-top: 10vh;
 	width: 60%;
 	min-height: 90vh;
 	border-radius: 15px;
 	margin: 5vh auto;
+}
+
+.ticketMain {
+	padding-top: 10vh;
 }
 
 @media (max-width: 1000px) {
@@ -68,9 +72,6 @@ h2 {
 	transition: background-color 0.05s;
 }
 
-#generate:focus {
-	outline: none;
-}
 
 /* Form CSS */
 
@@ -143,4 +144,56 @@ h2 {
 #submit {
 	display: none;
 	margin: 20px auto;
+}
+
+#ticket {
+	font-family: 'Roboto Mono', monospace;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	width: 800px;
+	max-width: 80%;
+	margin: 20px auto;
+	align-self: center;
+	padding: 15px;
+	text-align: left;
+}
+
+.download {
+	cursor: pointer;
+	padding: 8px 12px;
+	font-size: 1.1em;
+	border: 1px solid #007096;
+	border-radius: 5px;
+	background-color: #0da1d6;
+	color: #fff;
+	margin: 20px;
+}
+
+.download:hover {
+	background-color: #a6e8ff;
+	border-color: #007096;
+	color: #223446;
+	transition: background-color 0.05s;
+}
+
+.download:active {
+	background-color: #007096;
+	border-color: #007096;
+	color: #f3f7f3;
+	transition: background-color 0.05s;
+}
+
+.errorMsg {
+	padding-top: 10vh;
+	color: #d91200;
+	font-size: 1.4em;
+}
+
+.back {
+	padding: 5px 10px;
+	font-size: 1em;
 }

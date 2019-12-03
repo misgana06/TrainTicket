@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class TrainDAO {
 	
 	String driver_name="oracle.jdbc.driver.OracleDriver";
-	String DB_URL="jdbc:oracle:thin:@localhost:1521:orcl";
+	String DB_URL="jdbc:oracle:thin:@localhost:1521:orclcdb";
 	String username="hr";
 	String password="hr";
 	Train trn;
