@@ -91,11 +91,8 @@ public class Ticket {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
 		String strDate = format.format(travelDate);
 		String[] split = strDate.split("/");
-		String finalDate = "";
-		for(int i = 0; i < split.length; i++) {
-			finalDate += split[i];
-		}
-		pnr = train.getSource().charAt(0) + train.getDestination().charAt(0) +"_"+ finalDate +"_"+ Integer.toString(counter);
+		String finalDate = split[0]+split[1]+split[2];
+		pnr = String.valueOf(train.getSource().charAt(0))+String.valueOf(train.getDestination().charAt(0)) +"_"+ finalDate +"_"+ Integer.toString(counter);
 		return pnr;
 	}
 	
@@ -165,9 +162,9 @@ public class Ticket {
 		
 		for(Entry<Passenger, Double> entry : passengers.entrySet()) { 
 			Passenger p = entry.getKey();
-			ticket.append(String.format("%-20s%-10s%-10s%s\n", p.getName(),p.getAge(),p.getGender(),entry.getValue()));
+			ticket.append(String.format("%-20s%-10s%-10s%.2f\n", p.getName(),p.getAge(),p.getGender(),entry.getValue()));
 		}
-		ticket.append("Total Price : "+ calculateTotalTicketPrice());
+		ticket.append(String.format("%s%.2f","Total Price : ", calculateTotalTicketPrice()));
 		
 		return ticket;
 	}
