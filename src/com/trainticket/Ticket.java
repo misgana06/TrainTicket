@@ -174,12 +174,13 @@ public class Ticket {
 	 * creates new file and writes the output of generateTicket() into it. 
 	 */
 	public void writeTicket() {
+		String home = System.getProperty("user.home");
 		File file;
-		file = new File(pnr+".txt");
+		file = new File(home+"/Downloads/"+pnr+".txt");
 		if(file.exists()) {
 			counter++;
 			generatePNR();
-			file = new File(pnr+".txt");
+			file = new File(home+"/Downloads/"+pnr+".txt");
 		}
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
 		    writer.write(generateTicket().toString());
